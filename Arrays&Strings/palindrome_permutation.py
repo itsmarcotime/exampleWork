@@ -8,7 +8,7 @@
 # 2 2 2 1 2 2 2
 # r a c e c a r
 
-palindrome = "Tact Coa"
+palindrome = "rACE cAR"
 not_palindrome =" This is not a palindrome permutation"
 
 # the runtime of this function is O(n)
@@ -29,7 +29,7 @@ def palindrome_permutation(input_string):
         else:
             d[i] = 1
     
-    # we can only have up to 1 odd value for a palindrome so keep we need to keep track of the odd instances.
+    # we can only have up to 1 odd value for a palindrome so we need to keep track of the odd instances.
     odd_count = 0
 
     # for the key value pairs in each item in the dictionary.. 
