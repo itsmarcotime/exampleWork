@@ -7,6 +7,8 @@
 # pale, bale -> true
 # pale, bake -> false
 
+# time complexcity of this function is O(n) if strings are the same length, if the strings are different lengths 
+# then it is possible for there to be a time complexcity of O(n+m)
 def same_length_func(s1, s2):
     # initialize a counter to keep track of edits between the two strings
     edit_counter = 0
@@ -24,15 +26,21 @@ def same_length_func(s1, s2):
 
 def different_length(word1, word2):
     # same as i = 0, and count = 0, less space.
-    i = count = 0
+    i = edit_count = 0
 
     # while i (which starts at zero) is less than the length of word2 
+    # while loop will iterate through the indexes of each character in the string until
+    # the while contion goes through each character and compares word1 with word2
     while i < len(word2):
-        if word1[i + count] == word2[i]:
+        # if the characters match i will be increamented which will move on to the next character in the string
+        if word1[i + edit_count] == word2[i]:
             i += 1
+        # else if the charcters do not match or the while loop has met the max characters in the string 
+        # edit_count will be incremented. 
         else:
-            count += 1
-            if count > 1:
+            edit_count += 1
+            # There can only be one edit so, if edit count is geater than 1 just return false.
+            if edit_count > 1:
                 return False
     return True
 
