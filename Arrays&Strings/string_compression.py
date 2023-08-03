@@ -9,6 +9,8 @@ def string_compression(string):
     # the count starts at 1 because we assume that there is at least one value in the string being passed.
     count = 1
 
+    # for each charater in the range of 1 to the length of the string...
+    # we start at 1 becasue the count starts at 1
     for i in range(1, len(string)):
         if string[i] == string[i - 1]:
             count += 1
